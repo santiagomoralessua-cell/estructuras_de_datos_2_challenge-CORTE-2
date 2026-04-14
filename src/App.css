@@ -1,0 +1,181 @@
+/* Reset y base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0f172a;
+  color: #e2e8f0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+/* Contenedor principal */
+.contenedor {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Título principal */
+.titulo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  color: #f1f5f9;
+  margin-bottom: 0.5rem;
+}
+
+/* Tarjetas */
+.tarjeta {
+  background-color: #1e293b;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #334155;
+}
+
+.tarjeta h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+/* Fila de controles */
+.fila {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* Input */
+.input {
+  flex: 1;
+  min-width: 160px;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid #475569;
+  background-color: #0f172a;
+  color: #f1f5f9;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  border-color: #3b82f6;
+}
+
+/* Botones */
+.boton {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #3b82f6;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.boton:hover {
+  background-color: #2563eb;
+}
+
+.boton-secundario {
+  background-color: #334155;
+}
+
+.boton-secundario:hover {
+  background-color: #475569;
+}
+
+/* Resultado de búsqueda */
+.resultado {
+  margin-top: 0.9rem;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.encontrado {
+  background-color: #14532d;
+  color: #86efac;
+}
+
+.no-encontrado {
+  background-color: #4c0519;
+  color: #fca5a5;
+}
+
+/* Recorridos */
+.recorridos {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.recorrido-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.etiqueta {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #3b82f6;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.valores {
+  font-size: 0.88rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+/* Árbol D3 */
+.arbol-contenedor {
+  width: 100%;
+  height: 450px;
+  background-color: #0f172a;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Estilos del SVG de react-d3-tree */
+.arbol-contenedor svg {
+  width: 100%;
+  height: 100%;
+}
+
+.rd3t-link {
+  stroke: #475569 !important;
+}
+
+.rd3t-label__title {
+  fill: #f1f5f9 !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+
+.rd3t-node circle {
+  fill: #3b82f6 !important;
+  stroke: #93c5fd !important;
+}
+
+.rd3t-leaf-node circle {
+  fill: #1d4ed8 !important;
+  stroke: #60a5fa !important;
+}
