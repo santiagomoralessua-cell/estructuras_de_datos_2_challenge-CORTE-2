@@ -1,0 +1,181 @@
+/* Reset y base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0f172a;
+  color: #e2e8f0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Layout de dos columnas */
+.layout {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  min-width: 250px;
+  background-color: #1e293b;
+  border-right: 1px solid #334155;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.sidebar-header {
+  padding: 1.5rem 1.25rem 1rem;
+  border-bottom: 1px solid #334155;
+}
+
+.sidebar-header h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Lista de menú */
+nav {
+  padding: 0.5rem 0;
+}
+
+.lista-menu,
+.submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Items del menú */
+.item-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.6rem 1.25rem;
+  background: none;
+  border: none;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s;
+  border-radius: 0;
+}
+
+.item-menu:hover {
+  background-color: #3b82f620;
+  color: #f1f5f9;
+}
+
+/* Item seleccionado */
+.item-menu.seleccionado {
+  background-color: #3b82f6;
+  color: #fff;
+  font-weight: 600;
+}
+
+.item-menu.seleccionado:hover {
+  background-color: #2563eb;
+}
+
+/* Flecha de submenú */
+.flecha {
+  font-size: 1.1rem;
+  color: #64748b;
+  transition: transform 0.2s;
+  display: inline-block;
+}
+
+.flecha.abierta {
+  transform: rotate(90deg);
+  color: #3b82f6;
+}
+
+/* Submenú con indentación */
+.submenu {
+  border-left: 2px solid #334155;
+  margin-left: 1.25rem;
+}
+
+.submenu .item-menu {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.submenu .item-menu:hover {
+  background-color: #3b82f615;
+  color: #e2e8f0;
+}
+
+.submenu .item-menu.seleccionado {
+  background-color: #3b82f6;
+  color: #fff;
+}
+
+/* Área de contenido */
+.contenido {
+  flex: 1;
+  background-color: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+/* Tarjeta de contenido cuando hay item seleccionado */
+.tarjeta-contenido {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 2.5rem 3rem;
+  text-align: center;
+  min-width: 280px;
+}
+
+.contenido-titulo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 1rem;
+}
+
+.contenido-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.etiqueta-link {
+  color: #64748b;
+  font-weight: 600;
+}
+
+.contenido-link code {
+  background-color: #0f172a;
+  color: #3b82f6;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  border: 1px solid #334155;
+}
+
+/* Estado vacío */
+.contenido-vacio {
+  color: #475569;
+  font-size: 0.95rem;
+  text-align: center;
+}
