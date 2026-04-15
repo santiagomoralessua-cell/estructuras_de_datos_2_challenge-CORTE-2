@@ -1,0 +1,22 @@
+// Importamos bootstrap
+@import "bootstrap/scss/bootstrap";
+
+// Variables propias
+$color-primario: #0d6efd;
+$color-completada: #e9ecef;
+
+// Estilo para tareas completadas
+.tarea-completada {
+  background-color: $color-completada;
+  opacity: 0.8;
+}
+
+// Le damos un poco mas de espacio al navbar
+.navbar {
+  padding: 0.8rem 1rem;
+}
+
+// Sombra al card del login y registro
+.card {
+  border-radius: 10px;
+}
